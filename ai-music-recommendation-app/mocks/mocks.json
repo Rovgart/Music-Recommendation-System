@@ -1,0 +1,34 @@
+{
+  "cards": [
+    {
+      "id": "1",
+      "url": "https://picsum.photos/300/200?random=1",
+      "description": "Beautiful mountain landscape with snow-capped peaks and clear blue sky",
+      "title": "Energize Your Morning"
+    },
+    {
+      "id": "2",
+      "url": "https://picsum.photos/300/200?random=2",
+      "description": "Serene ocean view with gentle waves and golden sunset",
+      "title": "Chill Evening Vibes"
+    },
+    {
+      "id": "3",
+      "url": "https://picsum.photos/300/200?random=3",
+      "description": "Dense forest with tall trees and morning mist",
+      "title": "Focus & Flow"
+    },
+    {
+      "id": "4",
+      "url": "https://picsum.photos/300/200?random=4",
+      "description": "Urban cityscape with modern buildings and busy streets",
+      "title": "City Energy Boost"
+    },
+    {
+      "id": "5",
+      "url": "https://picsum.photos/300/200?random=5",
+      "description": "Peaceful lake surrounded by autumn trees",
+      "title": "Relax & Reflect"
+    }
+  ]
+}
