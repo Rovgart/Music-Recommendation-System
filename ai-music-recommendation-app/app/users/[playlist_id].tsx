@@ -22,7 +22,7 @@ export default function PlaylistDetails() {
   );
 
   return (
-    <View style={[styles.container, { padding: 12, gap: 24 }]}>
+    <View style={[{backgroundColor:theme.colors.background}, { padding: 12, gap: 24 }]}>
       {/* <Icon onPress={() => router.push("/users/index")} name="back" size={24} /> */}
       {/* <PlaylistItem
         key={playlist?.id}
