@@ -1,15 +1,12 @@
-import ModalComponent from "@/components/organisms/ModalComponent";
-import { useModalStore } from "@/store/modalStore";
-import { ThemeProvider } from "@/store/ThemeProvider";
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
+import { PaperProvider } from "react-native-paper";
 export default function RootLayout() {
   const queryClient = new QueryClient();
-  const { isOpen } = useModalStore();
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        {isOpen && <ModalComponent />}
+      <PaperProvider>
         <Stack
           screenOptions={{
             headerStyle: {
@@ -24,7 +21,7 @@ export default function RootLayout() {
           <Stack.Screen name="index" />
           <Stack.Screen name="auth" />
         </Stack>
-      </ThemeProvider>
+      </PaperProvider>
     </QueryClientProvider>
   );
 }

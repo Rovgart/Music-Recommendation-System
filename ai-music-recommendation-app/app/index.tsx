@@ -1,16 +1,18 @@
-import GenerateComponent from "@/components/organisms/GenerateComponent";
-import Header from "@/components/organisms/Header";
-import { useTheme } from "@/store/ThemeProvider";
-import { createMemoryStyles } from "@/utils";
-import { Text, View } from "react-native";
-export default function Index() {
-  const { theme } = useTheme();
 
+import { createMemoryStyles } from "@/utils";
+import { useState } from "react";
+import { Text, View } from "react-native";
+import { useTheme } from "react-native-paper";
+export default function Index() {
+  const theme = useTheme();
+  const [isVisible, setIsVisible] = useState(false);
   const styles = createMemoryStyles(theme);
+  const unfoldingMenuHandler = () => {
+    setIsVisible((prev) => !prev);
+  };
 
   return (
     <View style={[styles.container, { height: 400 }]}>
-      <Header />
       <View
         style={{
           gap: 24,
@@ -18,7 +20,6 @@ export default function Index() {
         }}
       >
         <Text style={styles.title}>Welcome again</Text>
-        <GenerateComponent />
       </View>
     </View>
   );

@@ -1,0 +1,586 @@
+{
+  "saved_playlists": [
+    {
+      "id": "1",
+      "url": "https://picsum.photos/300/200?random=1",
+      "description": "Beautiful mountain landscape with snow-capped peaks and clear blue sky",
+      "title": "Energize Your Morning",
+      "songs": [
+        {
+          "id": "s1",
+          "title": "Rise and Shine",
+          "artist": "Morning Vibes",
+          "duration": "3:24",
+          "isPlaying": false
+        },
+        {
+          "id": "s2",
+          "title": "New Day Energy",
+          "artist": "Sunrise Collective",
+          "duration": "4:12",
+          "isPlaying": false
+        },
+        {
+          "id": "s3",
+          "title": "Mountain High",
+          "artist": "Peak Performers",
+          "duration": "3:45",
+          "isPlaying": false
+        },
+        {
+          "id": "s4",
+          "title": "Fresh Start",
+          "artist": "Dawn Breakers",
+          "duration": "3:58",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "url": "https://picsum.photos/300/200?random=2",
+      "description": "Serene ocean view with gentle waves and golden sunset",
+      "title": "Chill Evening Vibes",
+      "songs": [
+        {
+          "id": "s5",
+          "title": "Sunset Waves",
+          "artist": "Ocean Dreamers",
+          "duration": "4:30",
+          "isPlaying": false
+        },
+        {
+          "id": "s6",
+          "title": "Golden Hour",
+          "artist": "Coastal Sounds",
+          "duration": "5:15",
+          "isPlaying": false
+        },
+        {
+          "id": "s7",
+          "title": "Evening Breeze",
+          "artist": "Twilight Zone",
+          "duration": "3:52",
+          "isPlaying": false
+        },
+        {
+          "id": "s8",
+          "title": "Peaceful Tide",
+          "artist": "Serenity Now",
+          "duration": "6:01",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "url": "https://picsum.photos/300/200?random=3",
+      "description": "Dense forest with tall trees and morning mist",
+      "title": "Focus & Flow",
+      "songs": [
+        {
+          "id": "s9",
+          "title": "Deep Focus",
+          "artist": "Concentration Station",
+          "duration": "7:20",
+          "isPlaying": false
+        },
+        {
+          "id": "s10",
+          "title": "Forest Whispers",
+          "artist": "Nature's Symphony",
+          "duration": "8:45",
+          "isPlaying": false
+        },
+        {
+          "id": "s11",
+          "title": "Mind Clear",
+          "artist": "Zen Masters",
+          "duration": "6:33",
+          "isPlaying": false
+        },
+        {
+          "id": "s12",
+          "title": "Flowing Thoughts",
+          "artist": "Mental Rivers",
+          "duration": "5:28",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "url": "https://picsum.photos/300/200?random=4",
+      "description": "Urban cityscape with modern buildings and busy streets",
+      "title": "City Energy Boost",
+      "songs": [
+        {
+          "id": "s13",
+          "title": "Urban Pulse",
+          "artist": "City Lights",
+          "duration": "3:35",
+          "isPlaying": false
+        },
+        {
+          "id": "s14",
+          "title": "Street Energy",
+          "artist": "Metro Beats",
+          "duration": "4:22",
+          "isPlaying": false
+        },
+        {
+          "id": "s15",
+          "title": "Downtown Rush",
+          "artist": "Traffic Jam",
+          "duration": "3:18",
+          "isPlaying": false
+        },
+        {
+          "id": "s16",
+          "title": "Skyscraper Dreams",
+          "artist": "High Rise",
+          "duration": "4:45",
+          "isPlaying": false
+        },
+        {
+          "id": "s17",
+          "title": "Neon Nights",
+          "artist": "Electric Avenue",
+          "duration": "5:02",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "url": "https://picsum.photos/300/200?random=5",
+      "description": "Peaceful lake surrounded by autumn trees",
+      "title": "Relax & Reflect",
+      "songs": [
+        {
+          "id": "s18",
+          "title": "Autumn Leaves",
+          "artist": "Seasonal Souls",
+          "duration": "4:55",
+          "isPlaying": false
+        },
+        {
+          "id": "s19",
+          "title": "Lake Reflections",
+          "artist": "Still Waters",
+          "duration": "6:12",
+          "isPlaying": false
+        },
+        {
+          "id": "s20",
+          "title": "Quiet Moments",
+          "artist": "Peaceful Hearts",
+          "duration": "5:33",
+          "isPlaying": false
+        },
+        {
+          "id": "s21",
+          "title": "Inner Peace",
+          "artist": "Meditation Masters",
+          "duration": "7:45",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "url": "https://picsum.photos/300/200?random=6",
+      "description": "Cozy cabin in snowy mountains with warm fireplace glow",
+      "title": "Winter Warmth",
+      "songs": [
+        {
+          "id": "s22",
+          "title": "Fireside Chat",
+          "artist": "Cozy Cabin",
+          "duration": "4:18",
+          "isPlaying": false
+        },
+        {
+          "id": "s23",
+          "title": "Snowy Evening",
+          "artist": "Winter Wonderland",
+          "duration": "5:42",
+          "isPlaying": false
+        },
+        {
+          "id": "s24",
+          "title": "Warm Embrace",
+          "artist": "Heartside",
+          "duration": "3:55",
+          "isPlaying": false
+        },
+        {
+          "id": "s25",
+          "title": "Cocoa Dreams",
+          "artist": "Comfort Zone",
+          "duration": "4:27",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "url": "https://picsum.photos/300/200?random=7",
+      "description": "Vibrant desert landscape with cacti and dramatic sunset colors",
+      "title": "Workout Warriors",
+      "songs": [
+        {
+          "id": "s26",
+          "title": "Power Drive",
+          "artist": "Muscle Factory",
+          "duration": "3:28",
+          "isPlaying": false
+        },
+        {
+          "id": "s27",
+          "title": "Beast Mode",
+          "artist": "Iron Will",
+          "duration": "4:05",
+          "isPlaying": false
+        },
+        {
+          "id": "s28",
+          "title": "Unstoppable",
+          "artist": "Gym Kings",
+          "duration": "3:44",
+          "isPlaying": false
+        },
+        {
+          "id": "s29",
+          "title": "Desert Storm",
+          "artist": "Warrior Tribe",
+          "duration": "4:33",
+          "isPlaying": false
+        },
+        {
+          "id": "s30",
+          "title": "Maximum Effort",
+          "artist": "Fitness Fury",
+          "duration": "3:12",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "url": "https://picsum.photos/300/200?random=8",
+      "description": "Cozy coffee shop interior with warm lighting and vintage furniture",
+      "title": "Study Sessions",
+      "songs": [
+        {
+          "id": "s31",
+          "title": "Coffee Shop Ambience",
+          "artist": "Study Buddies",
+          "duration": "6:18",
+          "isPlaying": false
+        },
+        {
+          "id": "s32",
+          "title": "Concentration Mode",
+          "artist": "Academic Flow",
+          "duration": "5:55",
+          "isPlaying": false
+        },
+        {
+          "id": "s33",
+          "title": "Library Vibes",
+          "artist": "Quiet Minds",
+          "duration": "7:22",
+          "isPlaying": false
+        },
+        {
+          "id": "s34",
+          "title": "Brain Food",
+          "artist": "Smart Cookies",
+          "duration": "4:48",
+          "isPlaying": false
+        },
+        {
+          "id": "s35",
+          "title": "Mental Marathon",
+          "artist": "Study Strong",
+          "duration": "8:15",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "url": "https://picsum.photos/300/200?random=9",
+      "description": "Starry night sky over rolling hills with the Milky Way visible",
+      "title": "Late Night Dreams",
+      "songs": [
+        {
+          "id": "s36",
+          "title": "Midnight Stars",
+          "artist": "Cosmic Wanderers",
+          "duration": "5:44",
+          "isPlaying": false
+        },
+        {
+          "id": "s37",
+          "title": "Galaxy Dreams",
+          "artist": "Stellar Sounds",
+          "duration": "6:33",
+          "isPlaying": false
+        },
+        {
+          "id": "s38",
+          "title": "Night Whispers",
+          "artist": "Moonlight Melody",
+          "duration": "4:27",
+          "isPlaying": false
+        },
+        {
+          "id": "s39",
+          "title": "Sleepy Hollow",
+          "artist": "Dream Weavers",
+          "duration": "7:12",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "url": "https://picsum.photos/300/200?random=10",
+      "description": "Tropical beach with palm trees and crystal clear turquoise water",
+      "title": "Summer Paradise",
+      "songs": [
+        {
+          "id": "s40",
+          "title": "Tropical Breeze",
+          "artist": "Island Vibes",
+          "duration": "3:58",
+          "isPlaying": false
+        },
+        {
+          "id": "s41",
+          "title": "Beach Party",
+          "artist": "Sun Kissed",
+          "duration": "4:25",
+          "isPlaying": false
+        },
+        {
+          "id": "s42",
+          "title": "Paradise Found",
+          "artist": "Coconut Dreams",
+          "duration": "3:33",
+          "isPlaying": false
+        },
+        {
+          "id": "s43",
+          "title": "Summer Nights",
+          "artist": "Endless Summer",
+          "duration": "4:48",
+          "isPlaying": false
+        },
+        {
+          "id": "s44",
+          "title": "Ocean Waves",
+          "artist": "Tidal Force",
+          "duration": "5:15",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "url": "https://picsum.photos/300/200?random=11",
+      "description": "Rain drops on window glass with blurred city lights in background",
+      "title": "Rainy Day Moods",
+      "songs": [
+        {
+          "id": "s45",
+          "title": "Raindrops",
+          "artist": "Weather Report",
+          "duration": "4:22",
+          "isPlaying": false
+        },
+        {
+          "id": "s46",
+          "title": "Stormy Weather",
+          "artist": "Cloud Nine",
+          "duration": "5:18",
+          "isPlaying": false
+        },
+        {
+          "id": "s47",
+          "title": "Cozy Indoors",
+          "artist": "Comfort Zone",
+          "duration": "6:05",
+          "isPlaying": false
+        },
+        {
+          "id": "s48",
+          "title": "Grey Skies",
+          "artist": "Melancholy Mood",
+          "duration": "4:44",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "url": "https://picsum.photos/300/200?random=12",
+      "description": "Minimalist zen garden with carefully arranged stones and sand patterns",
+      "title": "Meditation & Mindfulness",
+      "songs": [
+        {
+          "id": "s49",
+          "title": "Zen Garden",
+          "artist": "Mindful Moments",
+          "duration": "8:30",
+          "isPlaying": false
+        },
+        {
+          "id": "s50",
+          "title": "Breathing Space",
+          "artist": "Inner Peace",
+          "duration": "9:15",
+          "isPlaying": false
+        },
+        {
+          "id": "s51",
+          "title": "Present Moment",
+          "artist": "Awareness Now",
+          "duration": "7:45",
+          "isPlaying": false
+        },
+        {
+          "id": "s52",
+          "title": "Calm Waters",
+          "artist": "Serenity Spa",
+          "duration": "10:22",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "url": "https://picsum.photos/300/200?random=13",
+      "description": "Bustling farmers market with colorful fruits and vegetables",
+      "title": "Feel Good Favorites",
+      "songs": [
+        {
+          "id": "s53",
+          "title": "Good Vibes Only",
+          "artist": "Happy Hearts",
+          "duration": "3:42",
+          "isPlaying": false
+        },
+        {
+          "id": "s54",
+          "title": "Sunshine Day",
+          "artist": "Smile Makers",
+          "duration": "4:08",
+          "isPlaying": false
+        },
+        {
+          "id": "s55",
+          "title": "Joy Ride",
+          "artist": "Positive Energy",
+          "duration": "3:55",
+          "isPlaying": false
+        },
+        {
+          "id": "s56",
+          "title": "Happy Dance",
+          "artist": "Feel Good Inc",
+          "duration": "3:28",
+          "isPlaying": false
+        },
+        {
+          "id": "s57",
+          "title": "Celebration Time",
+          "artist": "Party People",
+          "duration": "4:15",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "url": "https://picsum.photos/300/200?random=14",
+      "description": "Vintage record player with vinyl albums scattered around",
+      "title": "Throwback Classics",
+      "songs": [
+        {
+          "id": "s58",
+          "title": "Vinyl Dreams",
+          "artist": "Retro Revival",
+          "duration": "4:33",
+          "isPlaying": false
+        },
+        {
+          "id": "s59",
+          "title": "Golden Oldies",
+          "artist": "Time Machine",
+          "duration": "3:48",
+          "isPlaying": false
+        },
+        {
+          "id": "s60",
+          "title": "Nostalgia Trip",
+          "artist": "Memory Lane",
+          "duration": "5:12",
+          "isPlaying": false
+        },
+        {
+          "id": "s61",
+          "title": "Classic Groove",
+          "artist": "Vintage Vibes",
+          "duration": "4:25",
+          "isPlaying": false
+        },
+        {
+          "id": "s62",
+          "title": "Old School Cool",
+          "artist": "Throwback Thursday",
+          "duration": "3:58",
+          "isPlaying": false
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "url": "https://picsum.photos/300/200?random=15",
+      "description": "Northern lights dancing over a snowy landscape with pine trees",
+      "title": "Deep Thoughts",
+      "songs": [
+        {
+          "id": "s63",
+          "title": "Aurora Borealis",
+          "artist": "Cosmic Contemplation",
+          "duration": "6:44",
+          "isPlaying": false
+        },
+        {
+          "id": "s64",
+          "title": "Philosophical Journey",
+          "artist": "Deep Thinkers",
+          "duration": "7:55",
+          "isPlaying": false
+        },
+        {
+          "id": "s65",
+          "title": "Introspective",
+          "artist": "Soul Searchers",
+          "duration": "5:33",
+          "isPlaying": false
+        },
+        {
+          "id": "s66",
+          "title": "Thoughtful Silence",
+          "artist": "Quiet Contemplation",
+          "duration": "8:18",
+          "isPlaying": false
+        }
+      ]
+    }
+  ]
+}

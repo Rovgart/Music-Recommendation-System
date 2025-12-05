@@ -1,16 +1,13 @@
-import RegisterField from "@/components/organisms/RegisterField";
-import { useTheme } from "@/store/ThemeProvider";
 import { createMemoryStyles } from "@/utils";
-import { Link } from "expo-router";
 import { Text, View } from "react-native";
+import { useTheme } from "react-native-paper";
 export default function Index() {
-  const { theme } = useTheme();
+  const  theme  = useTheme();
   const styles = createMemoryStyles(theme);
   return (
-    <View style={[styles.container]}>
+    <View style={[styles.loginContainer]}>
       <Text style={[styles.title]}>Sign up</Text>
-      <RegisterField />
-      <Link href={"/auth/login"}>Sign In</Link>
+      {/* <RegisterField /> */}
     </View>
   );
 }
