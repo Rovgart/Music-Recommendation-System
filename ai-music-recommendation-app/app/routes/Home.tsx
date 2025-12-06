@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 import { useTheme } from "react-native-paper";
-import { GenerateForm } from "../components/forms/GenerateForm";
+import GenerateForm from "../components/forms/GenerateForm";
 
 export default function Home() {
 	const theme = useTheme();
@@ -37,7 +37,6 @@ export default function Home() {
 			>
 				How are you feeling today ?
 			</Text>
-
 			<GenerateForm />
 		</View>
 	);

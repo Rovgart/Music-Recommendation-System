@@ -25,7 +25,7 @@ const BottomNav = () => {
 			unfocusedIcon: "bell-outline",
 		},
 		{
-			key: "notifications",
+			key: "Settings",
 			title: "Settings",
 			focusedIcon: "cog",
 			unfocusedIcon: "cog-outline",
