@@ -5,8 +5,21 @@ export const GenerateForm = () => {
 	const theme = useTheme();
 	return (
 		<Form control={form.control}>
-			<form style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-				<TextInput />
+			<form
+				style={{
+					display: "flex",
+					flex: 1,
+					justifyContent: "center",
+					alignItems: "center",
+					flexDirection: "column",
+					gap: 8,
+				}}
+			>
+				<TextInput
+					style={{
+						width: "60%",
+					}}
+				/>
 				<Button
 					style={{
 						backgroundColor: theme.colors.backdrop,

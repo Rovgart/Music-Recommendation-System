@@ -1,27 +1,21 @@
+import Home from "@/app/routes/Home";
 import * as React from "react";
-import { BottomNavigation, Text } from "react-native-paper";
-
-const MusicRoute = () => <Text>Music</Text>;
-
-const AlbumsRoute = () => <Text>Albums</Text>;
-
-const RecentsRoute = () => <Text>Recents</Text>;
-
-const NotificationsRoute = () => <Text>Notifications</Text>;
+import { BottomNavigation } from "react-native-paper";
 
 const BottomNav = () => {
-	const [index, setIndex] = React.useState(0);
+	const [index, setCurrentRoute] = React.useState(0);
 	const [routes] = React.useState([
 		{
-			key: "music",
-			title: "Favorites",
-			focusedIcon: "heart",
-			unfocusedIcon: "heart",
+			key: "home",
+			title: "Generate",
+			focusedIcon: "robot-excited",
+			unfocusedIcon: "robot-excited-outline",
 		},
 		{ key: "albums", title: "Albums", focusedIcon: "album" },
 		{
-			key: "recents",
+			key: "playlists",
 			title: "Playlists",
+			unfocusedIcon: "playlist-music",
 			focusedIcon: "playlist-music-outline",
 		},
 		{
@@ -34,21 +28,18 @@ const BottomNav = () => {
 			key: "notifications",
 			title: "Settings",
 			focusedIcon: "cog",
-			unfocusedIcon: "cog",
+			unfocusedIcon: "cog-outline",
 		},
 	]);
 
 	const renderScene = BottomNavigation.SceneMap({
-		music: MusicRoute,
-		albums: AlbumsRoute,
-		recents: RecentsRoute,
-		notifications: NotificationsRoute,
+		home: Home,
 	});
 
 	return (
 		<BottomNavigation
 			navigationState={{ index, routes }}
-			onIndexChange={setIndex}
+			onIndexChange={setCurrentRoute}
 			renderScene={renderScene}
 		/>
 	);
