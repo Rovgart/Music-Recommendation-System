@@ -1,6 +1,7 @@
 import { Text, View } from "react-native";
 import { useTheme } from "react-native-paper";
 import { GenerateForm } from "./components/forms/GenerateForm";
+import BottomNav from "./components/navigation/BottomNavigation";
 
 export default function Index() {
 	const theme = useTheme();
@@ -10,11 +11,13 @@ export default function Index() {
 			style={{
 				flex: 1,
 				backgroundColor: theme.colors.background,
-				alignItems: "center",
+				// alignItems: "center",
 			}}
 		>
 			<View
 				style={{
+					flex: 1,
+					alignItems: "center",
 					gap: 24,
 					padding: 12,
 					maxWidth: 700,
@@ -45,6 +48,7 @@ export default function Index() {
 
 				<GenerateForm />
 			</View>
+			<BottomNav />
 		</View>
 	);
 }
