@@ -1,5 +1,3 @@
-// import PlaylistItem from "@/components/molecules/PlaylistItem";
-
 import { createMemoryStyles } from "@/utils";
 import { useLocalSearchParams } from "expo-router";
 import { FlatList, Text, View } from "react-native";
