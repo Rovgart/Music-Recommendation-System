@@ -1,3 +1,4 @@
+import ExploreRoute from "@/app/routes/Explore";
 import Home from "@/app/routes/Home";
 import * as React from "react";
 import { BottomNavigation } from "react-native-paper";
@@ -11,7 +12,7 @@ const BottomNav = () => {
 			focusedIcon: "robot-excited",
 			unfocusedIcon: "robot-excited-outline",
 		},
-		{ key: "albums", title: "Albums", focusedIcon: "album" },
+		{ key: "albums", title: "Explore", focusedIcon: "album" },
 		{
 			key: "playlists",
 			title: "Playlists",
@@ -34,6 +35,7 @@ const BottomNav = () => {
 
 	const renderScene = BottomNavigation.SceneMap({
 		home: Home,
+		albums: ExploreRoute,
 	});
 
 	return (
