@@ -1,13 +1,23 @@
+import { type RegisterFormValues, registerSchema } from "@/schemas/auth";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, Form, useForm } from "react-hook-form";
 import { View } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 import { GoogleButton } from "../buttons/GoogleButton";
-
 export default function RegisterForm() {
-	const form = useForm();
+	const form = useForm<RegisterFormValues>({
+		resolver: zodResolver(registerSchema),
+		defaultValues: {
+			email: "",
+			password: "",
+		},
+	});
+	const onSubmit = async (data: RegisterFormValues) => {
+		console.log(data);
+	};
 	return (
 		<Form {...form}>
-			<form onSubmit={() => console.log("Submitted")} action="">
+			<form onSubmit={form.handleSubmit(onSubmit)} action="">
 				<View style={{ flex: 1, display: "flex", gap: 16 }}>
 					<Controller
 						control={form.control}
