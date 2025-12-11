@@ -27,5 +27,5 @@ yarn-error.*
 .env*.local
 
 *.tsbuildinfo
-
+.env
 app-example
