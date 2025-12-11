@@ -2,6 +2,8 @@ import { darkTheme, lightTheme } from "@/theme";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
 import { PaperProvider, useTheme } from "react-native-paper";
+import Toast from "react-native-toast-message";
+
 export default function RootLayout() {
 	const theme = useTheme();
 	const queryClient = new QueryClient();
@@ -13,6 +15,7 @@ export default function RootLayout() {
 						headerStyle: {
 							backgroundColor: "#f4511e",
 						},
+						headerShown: false,
 						headerTintColor: "#fff",
 						headerTitleStyle: {
 							fontWeight: "bold",
@@ -22,6 +25,7 @@ export default function RootLayout() {
 					<Stack.Screen name="index" />
 					<Stack.Screen name="auth" />
 				</Stack>
+				<Toast />
 			</PaperProvider>
 		</QueryClientProvider>
 	);

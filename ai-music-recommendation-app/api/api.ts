@@ -12,21 +12,24 @@ export const registerUser = async (data: RegisterFormValues) => {
 		);
 		const user = userCredential.user;
 		console.log("User registered", user);
+
+		return { success: true, user };
 	} catch (error) {
 		if (error instanceof FirebaseError) {
 			switch (error.code) {
 				case "auth/email-already-in-use":
-					console.log("Email already in use");
-					break;
+					return { success: false, error: "This email is already registered" };
+
 				case "auth/invalid-email":
-					console.log("Invalid email");
-					break;
+					return { success: false, error: "Invalid email" };
+
 				case "auth/weak-password":
-					console.log("Password is too weak");
-					break;
+					return { success: false, error: "Password is too weak" };
+
+				default:
+					return { success: false, error: "Error occurred during signing up" };
 			}
-		} else {
-			console.log("Unknown error", error);
 		}
+		return { success: false, error: "Unknown error occurred" };
 	}
 };
