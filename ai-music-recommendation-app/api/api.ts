@@ -1,7 +1,10 @@
 import { auth } from "@/firebase";
-import type { RegisterFormValues } from "@/schemas/auth";
+import type { LoginFormValues, RegisterFormValues } from "@/schemas/auth";
 import { FirebaseError } from "firebase/app";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+	createUserWithEmailAndPassword,
+	signInWithEmailAndPassword,
+} from "firebase/auth";
 
 export const registerUser = async (data: RegisterFormValues) => {
 	try {
@@ -32,4 +35,44 @@ export const registerUser = async (data: RegisterFormValues) => {
 		}
 		return { success: false, error: "Unknown error occurred" };
 	}
+};
+export const loginUser = async (data: LoginFormValues) => {
+	try {
+		const res = await signInWithEmailAndPassword(
+			auth,
+			data.email,
+			data.password,
+		);
+		const user = res.user;
+		return { success: true, user };
+	} catch (error) {
+		if (error instanceof FirebaseError) {
+			switch (error.code) {
+				case "auth/invalid-email":
+					return { success: false, error: "Invalid email address" };
+
+				case "auth/user-disabled":
+					return { success: false, error: "This account has been blocked" };
+
+				case "auth/user-not-found":
+					return { success: false, error: "User not found" };
+
+				case "auth/wrong-password":
+					return { success: false, error: "Incorrect password" };
+
+				case "auth/invalid-credential":
+					return { success: false, error: "Incorrect email or password" };
+
+				case "auth/too-many-requests":
+					return {
+						success: false,
+						error: "Too many attempts. Try again later",
+					};
+
+				default:
+					return { success: false, error: "Error occurred during login" };
+			}
+		}
+	}
+	return { success: false, error: "Unknown error occurred" };
 };

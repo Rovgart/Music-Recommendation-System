@@ -33,3 +33,4 @@ export const changeEmailSchema = z
 		message: "Emails are the same",
 	});
 export type RegisterFormValues = z.infer<typeof registerSchema>;
+export type LoginFormValues = z.infer<typeof loginSchema>;
