@@ -1,8 +1,11 @@
 import { auth } from "@/firebase";
 import type { LoginFormValues, RegisterFormValues } from "@/schemas/auth";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { FirebaseError } from "firebase/app";
 import {
 	createUserWithEmailAndPassword,
+	GoogleAuthProvider,
+	signInWithCredential,
 	signInWithEmailAndPassword,
 } from "firebase/auth";
 
@@ -75,4 +78,20 @@ export const loginUser = async (data: LoginFormValues) => {
 		}
 	}
 	return { success: false, error: "Unknown error occurred" };
+};
+export const signInWIthGoogle = async () => {
+	try {
+		await GoogleSignin.hasPlayServices();
+		const userInfo = await GoogleSignin.signIn();
+		const { idToken } = await GoogleSignin.getTokens();
+		const credential = GoogleAuthProvider.credential(idToken);
+		const userCredential = await signInWithCredential(auth, credential);
+		return { success: true, user: userCredential.user };
+	} catch (error) {
+		console.error("Google Sign-In Error", error);
+		return {
+			success: false,
+			error: error.message || "Błąd logowania przez Google",
+		};
+	}
 };

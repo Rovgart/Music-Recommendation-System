@@ -1,4 +1,4 @@
-import { loginUser } from "@/api/api";
+import { loginUser, signInWIthGoogle } from "@/api/api";
 import { type LoginFormValues, loginSchema } from "@/schemas/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "expo-router";
@@ -37,6 +37,15 @@ export default function LoginForm() {
 				type: "error",
 				text1: "Failed to sign in",
 				text2: result.error,
+			});
+		}
+	};
+	const continueWithGoogle = async () => {
+		const result = await signInWIthGoogle();
+		if (result.success) {
+			Toast.show({
+				type: "info",
+				text1: "Redirecting to Google Auth Provider",
 			});
 		}
 	};
@@ -89,16 +98,7 @@ export default function LoginForm() {
 				>
 					Sign In
 				</Button>
-				<GoogleButton
-					onPress={() => {
-						Toast.show({
-							position: "top",
-							type: "success",
-							text1: "Google Auth",
-							text2: "Is showing !",
-						});
-					}}
-				/>
+				<GoogleButton onPress={continueWithGoogle} />
 			</View>
 		</Form>
 	);
