@@ -1,31 +1,39 @@
+import { useAuthStore } from "@/store/authStore";
 import { darkTheme, lightTheme } from "@/theme";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
-import { PaperProvider, useTheme } from "react-native-paper";
+import { useEffect } from "react";
+import { useColorScheme } from "react-native";
+import { PaperProvider } from "react-native-paper";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import Toast from "react-native-toast-message";
 
+const queryClient = new QueryClient();
 export default function RootLayout() {
-	const theme = useTheme();
-	const queryClient = new QueryClient();
+	const initAuthListener = useAuthStore((s) => s.initAuthListener);
+	useEffect(() => {
+		const unsubscribe = initAuthListener();
+		return unsubscribe;
+	}, [initAuthListener]);
+	const scheme = useColorScheme();
 	return (
 		<QueryClientProvider client={queryClient}>
-			<PaperProvider theme={theme.dark ? darkTheme : lightTheme}>
-				<Stack
-					screenOptions={{
-						headerStyle: {
-							backgroundColor: "#f4511e",
-						},
-						headerShown: false,
-						headerTintColor: "#fff",
-						headerTitleStyle: {
-							fontWeight: "bold",
-						},
-					}}
-				>
-					<Stack.Screen name="index" />
-					<Stack.Screen name="auth" />
-				</Stack>
-				<Toast />
+			<PaperProvider theme={scheme === "dark" ? darkTheme : lightTheme}>
+				<SafeAreaProvider>
+					<Stack
+						screenOptions={{
+							headerStyle: {
+								backgroundColor: "#f4511e",
+							},
+							headerShown: false,
+							headerTintColor: "#fff",
+							headerTitleStyle: {
+								fontWeight: "bold",
+							},
+						}}
+					></Stack>
+					<Toast />
+				</SafeAreaProvider>
 			</PaperProvider>
 		</QueryClientProvider>
 	);
