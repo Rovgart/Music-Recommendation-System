@@ -1,13 +1,15 @@
 import { createMemoryStyles } from "@/utils";
 import { Text } from "react-native";
 import { useTheme } from "react-native-paper";
-import { SafeAreaView } from "react-native-safe-area-context";
+import LoginForm from "../components/forms/LoginForm";
+import { AuthScreenLayout } from "./AuthScreenLayout";
 export default function Login() {
 	const theme = useTheme();
 	const styles = createMemoryStyles(theme);
 	return (
-		<SafeAreaView>
+		<AuthScreenLayout>
 			<Text style={[styles.title]}>Sign In</Text>
-		</SafeAreaView>
+			<LoginForm />
+		</AuthScreenLayout>
 	);
 }
