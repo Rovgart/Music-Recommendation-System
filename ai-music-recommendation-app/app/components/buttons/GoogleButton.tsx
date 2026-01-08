@@ -1,20 +1,12 @@
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Button } from "react-native-paper";
+import Button from "./button";
 
-export function GoogleButton({ onPress }: { onPress: () => void }) {
+function GoogleButton({ onPress }: { onPress: () => void }) {
 	return (
 		<Button
-			mode="contained"
+			title="Continue with Google"
 			onPress={onPress}
-			icon={() => (
-				<MaterialCommunityIcons name="google" size={20} color="white" />
-			)}
-			style={{
-				borderRadius: 8,
-				paddingVertical: 4,
-			}}
-		>
-			Continue with Google
-		</Button>
+			variant="secondary"
+		/>
 	);
 }
+export default GoogleButton;

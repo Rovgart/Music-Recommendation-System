@@ -3,36 +3,28 @@ import { type RegisterFormValues, registerSchema } from "@/schemas/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "expo-router";
 import { Controller, useForm } from "react-hook-form";
-import { Text, View } from "react-native";
-import { Button, TextInput } from "react-native-paper";
+import { StyleSheet, Text, View } from "react-native";
+import { TextInput } from "react-native-paper";
 import Toast from "react-native-toast-message";
-import { GoogleButton } from "../buttons/GoogleButton";
+import Button from "../buttons/button";
+import GoogleButton from "../buttons/GoogleButton";
 
 export default function RegisterForm() {
 	const router = useRouter();
 
 	const form = useForm<RegisterFormValues>({
 		resolver: zodResolver(registerSchema),
-		defaultValues: {
-			email: "",
-			password: "",
-		},
+		defaultValues: { email: "", password: "" },
 	});
 
 	const onSubmit = async (data: RegisterFormValues) => {
-		Toast.show({
-			type: "info",
-			text1: "Rejestracja...",
-			autoHide: false,
-		});
-
+		Toast.show({ type: "info", text1: "Rejestracja...", autoHide: false });
 		const result = await registerUser(data);
 
 		if (result.success) {
 			Toast.show({
 				type: "success",
 				text1: "Account successfully created",
-				text2: "Witaj w aplikacji 🎉",
 				visibilityTime: 2000,
 				onHide: () => router.push("/app"),
 			});
@@ -46,18 +38,29 @@ export default function RegisterForm() {
 	};
 
 	return (
-		<View>
-			<View style={{ gap: 16 }}>
+		<View className="flex-1 justify-center p-6">
+			<Text className="text-4xl text-text font-bold justify-center text-center mb-6">
+				Sign Up
+			</Text>
+
+			<View className="gap-4">
 				<Controller
 					control={form.control}
 					name="email"
-					render={({ field }) => (
-						<TextInput
-							mode="outlined"
-							value={field.value}
-							onChangeText={field.onChange}
-							placeholder="Email"
-						/>
+					render={({ field, fieldState }) => (
+						<>
+							<TextInput
+								className="bg-text border border-secondary/40 text-text placeholder:text-muted focus:border-accent focus:ring-1 focus:ring-accent"
+								secureTextEntry
+								mode="outlined"
+								value={field.value}
+								onChangeText={field.onChange}
+								placeholder="Email"
+							/>
+							{fieldState.error && (
+								<Text style={styles.errorText}>{fieldState.error.message}</Text>
+							)}
+						</>
 					)}
 				/>
 
@@ -67,6 +70,7 @@ export default function RegisterForm() {
 					render={({ field, fieldState }) => (
 						<>
 							<TextInput
+								className="bg-text border border-secondary/40 text-text placeholder:text-muted focus:border-accent focus:ring-1 focus:ring-accent"
 								secureTextEntry
 								mode="outlined"
 								value={field.value}
@@ -74,23 +78,14 @@ export default function RegisterForm() {
 								placeholder="Password"
 							/>
 							{fieldState.error && (
-								<Text style={{ color: "red" }}>{fieldState.error.message}</Text>
+								<Text style={styles.errorText}>{fieldState.error.message}</Text>
 							)}
 						</>
 					)}
 				/>
 			</View>
-
-			<View style={{ gap: 8, marginTop: 16 }}>
-				<Button
-					loading={form.formState.isSubmitting}
-					icon="login-variant"
-					onPress={form.handleSubmit(onSubmit)}
-					mode="contained"
-				>
-					Sign Up
-				</Button>
-
+			<View className="gap-4 mt-8">
+				<Button onPress={form.handleSubmit(onSubmit)} title="Sign Up" />
 				<GoogleButton
 					onPress={() =>
 						Toast.show({
@@ -101,6 +96,45 @@ export default function RegisterForm() {
 					}
 				/>
 			</View>
+			<View className="mt-8 flex flex-row gap-4 justify-center items-center">
+				<Text className="text-text">Already have an account?</Text>
+				<Button
+					onPress={() => {
+						router.push("/auth/login");
+					}}
+					title="Sign In"
+				/>
+			</View>
 		</View>
 	);
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: "#0a0a0a",
+		padding: 20,
+		justifyContent: "center",
+	},
+	title: {
+		fontSize: 32,
+		fontWeight: "bold",
+		color: "#fff",
+		marginBottom: 32,
+		textAlign: "center",
+	},
+	form: { gap: 16 },
+	input: {
+		// backgroundColor: "#1a1a1
+		color: "#fff",
+	},
+	button: {
+		borderRadius: 8,
+		paddingVertical: 10,
+	},
+	errorText: {
+		color: "#ef4444",
+		fontSize: 13,
+		marginTop: 4,
+	},
+});

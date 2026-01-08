@@ -1,7 +1,7 @@
 import { useAuthStore } from "@/store/authStore";
 import { Redirect, Slot } from "expo-router";
 import { useEffect } from "react";
-
+import "../../global.css";
 export default function AppLayout() {
 	const { loading, user } = useAuthStore();
 	useEffect(() => {
