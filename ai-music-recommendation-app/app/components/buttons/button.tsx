@@ -35,12 +35,10 @@ function Button({
 			className={clsx(
 				"px-6 py-3 rounded-lg items-center justify-center border-2 shadow-lg shadow-primary/35",
 				{
-					// Variants
 					"bg-primary border-accent": variant === "primary",
 					"bg-secondary border-accent": variant === "secondary",
 					"bg-accent border-accent": variant === "accent",
 
-					// States
 					"opacity-50": disabled,
 					"opacity-80 scale-95": isPressed && !disabled,
 				},
